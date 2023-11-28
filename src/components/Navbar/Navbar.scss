@@ -1,0 +1,26 @@
+.navbarContainer,
+.navlinks {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+.navbarContainer {
+    padding: 10px 20px;
+    border-bottom: 1px solid rgb(225, 225, 225);
+
+    .logo {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .navlinks {
+        gap: 10px;
+
+        .link {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
