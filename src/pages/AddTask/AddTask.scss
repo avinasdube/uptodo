@@ -1,0 +1,13 @@
+.addTaskContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex: 4;
+    
+    .heading{
+        font-size: 30px;
+        font-weight: 600;
+    }
+}
