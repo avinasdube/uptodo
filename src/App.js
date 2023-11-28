@@ -1,7 +1,6 @@
 import './App.scss';
 import TaskList from './pages/TaskList/TaskList';
 import AddTask from './pages/AddTask/AddTask';
-import EditTask from './pages/EditTask/EditTask';
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 
@@ -35,7 +34,7 @@ function App() {
         },
         {
           path: '/edit/:taskid',
-          element: <EditTask />
+          element: <AddTask />
         }
       ]
     }

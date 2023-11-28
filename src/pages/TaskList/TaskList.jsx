@@ -1,5 +1,6 @@
-import React from 'react'
-import SingleTask from '../../components/SingleTask/SingleTask'
+import React from 'react';
+import './TaskList.scss';
+import SingleTask from '../../components/SingleTask/SingleTask';
 
 const TaskList = () => {
 
@@ -8,19 +9,19 @@ const TaskList = () => {
       id: 1,
       taskName: "Write project documentation",
       taskDescrip: "Write the documentation for ongoing task 'UpTodo' before Thursday.",
-      priority: "",
+      priority: "High",
     },
     {
       id: 2,
       taskName: "Visit Akshardham",
       taskDescrip: "Go to visit Akshardham mandir in Delhi",
-      priority: "",
+      priority: "Low",
     },
     {
       id: 3,
       taskName: "Prepare for interview",
       taskDescrip: "Start preparing for the upcoming interview at AulaCube",
-      priority: "",
+      priority: "Medium",
     }
   ]
 
