@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: 0.3s linear;
 
     .left {
         display: flex;
@@ -54,6 +55,37 @@
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 460px) {
+    .taskContainer{
+        gap: 10px;
+        
+        .left{
+            .details{
+                .title{
+                    font-size: 14px;
+                    .priority{
+                        font-size: 8px;
+                    }
+                }
+
+                .descrip{
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .right{
+            gap: 8px;
+
+            img{
+                width: 20px;
+                height: 20px;
+            }
         }
     }
 }
