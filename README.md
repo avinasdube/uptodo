@@ -1,5 +1,7 @@
 # UpTodo
 
+UpTodo is a To Do/Task Management Application completely based on React. It provides all the basic functionalities of a task app such as creating, reading, editing and deleting a task. 
+
 Following is a detailed explanation of various important aspects of this project :
 
 ## Project Structure
@@ -42,3 +44,18 @@ Following are the major features of this application:
 - Feature 4: You can delete a selected task.
 - Feature 5: You can select filters to sort task based on their priorities.
 - Feature 6: You can easily view this application on your phone as it is responsive.
+
+## Screenshots
+
+Following are some screenshots of working app:
+
+### TaskList Page
+
+<img alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://github.com/avinasdube/project-screenshots/blob/main/menhew-fashion/screenshots/MNHM1.jpg">
+
+### Add Task Form
+
+<img alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://github.com/avinasdube/project-screenshots/blob/main/menhew-fashion/screenshots/MNHM1.jpg">
+
+##
+Developed By - Avinash Dubey
