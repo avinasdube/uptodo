@@ -78,3 +78,19 @@
         }
     }
 }
+
+@media only screen and (max-width: 460px) {
+    .formContainer{
+        padding: 20px;
+        form{
+
+            label{
+                font-size: 14px;
+            }
+            
+            input, textarea, button{
+                width: 250px;
+            }
+        }
+    }
+}
