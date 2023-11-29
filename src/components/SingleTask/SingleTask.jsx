@@ -11,15 +11,17 @@ const SingleTask = ({ tasks }) => {
 
     const dispatch = useDispatch();
 
+    // A FUNCTION TO HANDLE TASK CHECKING STATUS
     const handleCheck = (id) => {
         dispatch(checkTodo(id))
     }
+
     return (
         <>
             {tasks.length === 0 ?
                 <div style={{ textAlign: 'center' }}>No tasks found</div> :
                 tasks.map((task) => (
-                    <div className="taskContainer" key={task.id}>
+                    <div className="taskContainer" data-testid="mock-single-task" key={task.id}>
                         <div className="left">
                             <input type='checkbox' onChange={() => handleCheck(task.id)} checked={task.checked}></input>
                             <div className='details'>

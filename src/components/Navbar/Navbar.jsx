@@ -8,7 +8,7 @@ import create from '../../assets/create.png';
 const Navbar = () => {
 
   return (
-    <div className="navbarContainer">
+    <div className="navbarContainer" data-testid="navbar">
       <div className="logo">UpTodo</div>
       <div className="navlinks">
         <Link className='link' to='/tasklist'><img src={tasks} alt=''></img></Link>
