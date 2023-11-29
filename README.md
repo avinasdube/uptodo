@@ -51,11 +51,11 @@ Following are some screenshots of working app:
 
 ### TaskList Page
 
-<img alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://github.com/avinasdube/project-screenshots/blob/main/menhew-fashion/screenshots/MNHM1.jpg">
+<img alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://github.com/avinasdube/uptodo/blob/main/src/images/taskpage.jpg">
 
 ### Add Task Form
 
-<img alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://github.com/avinasdube/project-screenshots/blob/main/menhew-fashion/screenshots/MNHM1.jpg">
+<img alt="Screenshot 2022-10-15 at 1 19 54 PM" src="https://github.com/avinasdube/uptodo/blob/main/src/images/taskform.jpg">
 
 ##
 Developed By - Avinash Dubey
