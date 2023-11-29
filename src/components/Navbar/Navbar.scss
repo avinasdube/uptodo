@@ -20,7 +20,16 @@
 
         .link {
             text-decoration: none;
-            color: black;
+
+            img{
+                width: 25px;
+                height: 25px;
+                border-radius: 4px;
+
+                &:hover{
+                    background-color: rgb(225, 225, 225);
+                }
+            }
         }
     }
 }
