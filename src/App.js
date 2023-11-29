@@ -6,6 +6,7 @@ import Navbar from './components/Navbar/Navbar';
 
 function App() {
 
+  // DEFINING LAYOUT FOR EACH PAGE
   const Layout = () => {
     return (
       <>
@@ -15,6 +16,7 @@ function App() {
     )
   }
 
+  // DEFINING ROUTING PATHS TO EACH PAGE
   const router = createBrowserRouter([
     {
       path: '/',

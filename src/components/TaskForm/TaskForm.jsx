@@ -8,22 +8,25 @@ const TaskForm = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const { taskid } = useParams();
-    const targetId = taskid ? taskid.substring(1) : null;
+    const { taskid } = useParams(); // GETTING TARGETTED TASK ID FROM URL
+    const targetId = taskid ? taskid.substring(1) : null; // SEPARATING TASK FROM COLON
 
+    // GETTING TASKS FROM REDUX STATE REDUCER
     const tasks = useSelector(state => state.todos.todos);
-    const targetTask = tasks.find((task) => task.id === parseInt(targetId))
+    const targetTask = tasks.find((task) => task.id === parseInt(targetId)) // FINDING TARGETTED TASK TO EDIT
 
+    // DEFINING STATES FOR VARIOUS OPERATIONS
     const [popup, setPopup] = useState(false);
-
     const [title, setTitle] = useState(targetTask ? targetTask.taskName : '');
     const [descrip, setDescrip] = useState(targetTask ? targetTask.taskDescrip : '');
     const [priority, setPriority] = useState(targetTask ? targetTask.priority : 'Low');
 
+    // A FUNCTION TO HANDLE POPUP
     const handlePopup = () => {
         popup === false ? setPopup(true) : setPopup(false)
     }
 
+    // A FUNCTION TO HANDLE FORM SUBMISSION
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -38,14 +41,15 @@ const TaskForm = () => {
         }
 
         if (targetTask) {
-            dispatch(editTodo(newTask)) // DISPATCHING THE NEW TASK TO REDUX STORE
+            dispatch(editTodo(newTask)) // DISPATCHING THE NEW EDITED TASK TO REDUX STORE
         } else {
-            dispatch(addTodo(newTask)) // DISPATCHING THE NEW TASK TO REDUX STORE
+            dispatch(addTodo(newTask)) // DISPATCHING THE NEW CREATED TASK TO REDUX STORE
         }
 
         setTitle('') // SETTING INPUT TO EMPTY AFTER SUCCESSFUL TASK ADDITION
-        setDescrip('')
-        navigate('/')
+        setDescrip('') // SETTING INPUT TO EMPTY AFTER SUCCESSFUL TASK ADDITION
+
+        navigate('/') // NAVIGATE TO TASKLIST PAGE AFTER SUCCESSFULL TASK CREATION
     }
 
     return (

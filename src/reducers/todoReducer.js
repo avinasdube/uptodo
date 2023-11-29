@@ -16,7 +16,7 @@ const todoSlice = createSlice({
     reducers: {
         addTodo: (state, action) => {
 
-            // FETCHING 'tasklist' FROM LOCALSTORAGE AND STORING IT IN 'storageTask'
+            // FETCHING 'todolist' FROM LOCALSTORAGE AND STORING IT IN 'storageTask'
             let storageTask;
 
             if (localStorage.getItem("todolist") === null) {
@@ -28,7 +28,7 @@ const todoSlice = createSlice({
             // PUSHING THE NEW TASK TO 'storageTask' ARRAY
             storageTask.push(action.payload)
 
-            // UPDATING THE 'tasklist' ARRAY OF localStorage WITH NEW TASK
+            // UPDATING THE 'todolist' ARRAY OF localStorage WITH NEW TASK
             localStorage.setItem("todolist", JSON.stringify(storageTask))
 
             // UPDATING THE LOCAL STATE WITH NEW TASK
@@ -36,8 +36,10 @@ const todoSlice = createSlice({
         },
         editTodo: (state, action) => {
 
+            // GETTING 'targetTask' FROM PAYLOAD
             const targetTask = action.payload;
 
+            // FETCHING 'todolist' FROM LOCALSTORAGE AND STORING IT IN 'storageTask'
             const storageTask = JSON.parse(localStorage.getItem("todolist"));
 
             // RE-SAVING/EDITING THE TARGETTED TASK
@@ -64,10 +66,10 @@ const todoSlice = createSlice({
         checkTodo: (state, action) => {
             const id = action.payload;
 
-            // FETCHING 'tasklist' FROM LOCALSTORAGE AND STORING IT IN 'storageTask'
+            // FETCHING 'todolist' FROM LOCALSTORAGE AND STORING IT IN 'storageTask'
             const storageTask = JSON.parse(localStorage.getItem("todolist"))
 
-            // UNCHECKING THE TARGETTED TASK 
+            // CHECKING/UNCHECKING THE TARGETTED TASK 
             const updatedTasklist = storageTask.map(task => {
                 if (task.id.toString() === id.toString()) { // important to convert it to string
                     return {
@@ -82,19 +84,18 @@ const todoSlice = createSlice({
             localStorage.setItem("todolist", JSON.stringify(updatedTasklist));
 
             // UPDATING LOCAL STATE
-
             state.todos = updatedTasklist
         },
         removeTodo: (state, action) => {
             const id = action.payload;
 
-            // FETCHING 'tasklist' FROM LOCALSTORAGE AND STORING IT IN 'storageTask'
+            // FETCHING 'todolist' FROM LOCALSTORAGE AND STORING IT IN 'storageTask'
             const storageTasks = JSON.parse(localStorage.getItem("todolist"))
 
             // FILTERING 'storageTasks' HAVING NO TASK WITH 'task.id === id'
             const filteredTasks = storageTasks.filter(task => task.id !== id)
 
-            // UPDATING THE localstorage
+            // UPDATING THE localStorage
             localStorage.setItem("todolist", JSON.stringify(filteredTasks));
 
             // UPDATING THE LOCAL STATE

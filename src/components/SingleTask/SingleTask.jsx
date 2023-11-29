@@ -11,9 +11,11 @@ const SingleTask = ({ tasks }) => {
 
     const dispatch = useDispatch();
 
+    // A FUNCTION TO HANDLE TASK CHECKING STATUS
     const handleCheck = (id) => {
         dispatch(checkTodo(id))
     }
+
     return (
         <>
             {tasks.length === 0 ?

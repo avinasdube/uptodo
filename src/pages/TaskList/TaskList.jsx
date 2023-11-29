@@ -10,6 +10,7 @@ const TaskList = () => {
 
   const [popup, setPopup] = useState(false);
 
+  // A FUNCTION TO HANDLE POPUP DROPDOWN
   const handlePopup = () => {
     popup === true ? setPopup(false) : setPopup(true)
   }
