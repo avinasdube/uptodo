@@ -25,7 +25,7 @@ const TaskList = () => {
   const filteredTasks = activeFilter === "All Tasks" ? tasks : tasks.filter((task) => task.priority === activeFilter)
 
   return (
-    <div className="tasklistContainer">
+    <div className="tasklistContainer" data-testid="task-list">
       <div className="filters">
         <div className={`activeFilter ${popup === true ? 'active' : ''}`} onClick={handlePopup}>
           <img src={filter} alt=''></img><span>{activeFilter}</span>

@@ -53,7 +53,7 @@ const TaskForm = () => {
     }
 
     return (
-        <div className="formContainer">
+        <div className="formContainer" data-testid="mock-task-form">
             <form onSubmit={handleSubmit}>
                 <label>Enter your task name</label>
                 <input type='text' value={title} onChange={(e) => { setTitle(e.target.value) }} required></input>
