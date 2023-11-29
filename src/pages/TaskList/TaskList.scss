@@ -1,6 +1,64 @@
-.tasklistContainer{
+.tasklistContainer {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 20px;
+
+    .filters {
+        width: 100px;
+        font-size: 12px;
+        font-weight: 500;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: default;
+
+        .activeFilter {
+            width: 100px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid rgb(225, 225, 225);
+
+            img {
+                width: 15px;
+                height: 15px;
+            }
+
+            &.active {
+                border: 1px solid gray;
+                background-color: rgb(225, 225, 225);
+            }
+        }
+
+        .filterOptions {
+            width: 90px;
+            background-color: rgb(225, 225, 225);
+            position: absolute;
+            border-radius: 5px;
+            top: 35px;
+            display: none;
+            flex-direction: column;
+            padding: 10px;
+            gap: 5px;
+            transition: 0.3s ease-in-out;
+
+            span {
+                padding: 0 4px;
+                border-radius: 4px;
+
+                &:hover {
+                    background-color: white;
+                    color: black;
+                }
+            }
+        }
+
+        .filterOptions.active {
+            display: flex;
+        }
+    }
 }

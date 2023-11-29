@@ -41,6 +41,7 @@
             width: 60px;
             position: relative;
             font-size: 13px;
+            cursor: default;
 
             .activePriority {
                 width: 60px;
@@ -66,7 +67,7 @@
                 }
 
                 span:hover{
-                    background-color: gray;
+                    background-color: white;
                     border-radius: 4px;
                 }
             }
